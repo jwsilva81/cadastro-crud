@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+ 
+<div id="main" class="container-fluid">
+ <h3 class="page-header">Cadastra Esposa</h3>
+<form method="POST" action="">
+	{% csrf_token %}
+	{{ form.as_p }}	
+	<div id="actions" class="row">
+	<div class="col-md-12">
+		<button type="submit" class="btn btn-primary">Salvar</button>
+		<a href="index.html" class="btn btn-default">Cancelar</a>
+	</div>
+	</div>
+</form>
+</div>
+
+   
+{% endblock content %}
+

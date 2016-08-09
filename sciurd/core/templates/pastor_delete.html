@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+ 
+<div id="main" class="container-fluid">
+<h3 class="page-header">Deletar {{ objeto }}</h3>
+<form method="post">{% csrf_token %}
+     delete "{{ object }}" ?
+    <input type="submit" value="Submit" />
+</form>
+</div>
+   
+{% endblock content %}
+
+
+
+
+
+
+<!--form action="" method="POST">
+	{% csrf_token %}
+	<div id="actions" class="row">
+	{{ form.as_p }}
+	<div class="col-md-12">
+		<button type="submit" class="btn btn-primary">Salvar</button>
+		<a href="index.html" class="btn btn-default">Cancelar</a>
+	</div>
+	</div>
+</form>

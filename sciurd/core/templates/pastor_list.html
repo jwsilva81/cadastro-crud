@@ -1,0 +1,33 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+ 
+h1>Pastores</h1>
+<ul>
+    {% for nome in object_list %}
+    <li>{{ server.name }}  :  
+    <a href="{% url "pastor_edit" server.id %}">{{ server.ip }}</a>
+    <a href="{% url "pastor_delete" server.id %}">delete</a>
+    </li>
+    {% endfor %}
+</ul>
+
+<a href="{% url "server_new" %}">New</a>
+
+   
+{% endblock content %}
+
+
+
+<h1>Servers</h1>
+<ul>
+    {% for nome in object_list %}
+    <li>{{ server.name }}  :  
+    <a href="{% url "server_edit" server.id %}">{{ server.ip }}</a>
+    <a href="{% url "server_delete" server.id %}">delete</a>
+    </li>
+    {% endfor %}
+</ul>
+
+<a href="{% url "server_new" %}">New</a>
